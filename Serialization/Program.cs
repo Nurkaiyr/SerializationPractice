@@ -20,7 +20,7 @@ namespace Serialization
 
         private static void SerializeToJson(Person person)
         {
-            using (FileStream stream1 = new FileStream("C:\name_of_directory\name1.json", FileMode.OpenOrCreate))
+            using (FileStream stream1 = new FileStream(@"C:\name_of_directory\name1.json", FileMode.OpenOrCreate))
             {
                // JsonSerializer serializer = new JsonSerializer();
                 //serializer.Serialize(, person);
@@ -30,7 +30,7 @@ namespace Serialization
 
         private static void ReadCsv(Person person)
         {
-            using (FileStream stream = new FileStream("C:\name_of_directory\name.csv", FileMode.OpenOrCreate))
+            using (FileStream stream = new FileStream(@"C:\name_of_directory\name.csv", FileMode.OpenOrCreate))
             {
                 SoapFormatter formatter = new SoapFormatter();
                 formatter.Serialize(stream, person);
